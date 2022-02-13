@@ -7,13 +7,11 @@ import 'package:todolist/common/constants.dart';
 import 'package:todolist/util/link.dart';
 
 class SettingsScreen extends StatefulWidget {
-
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-
   Widget _buildSettingsList() {
     return SettingsList(
       sections: [
@@ -27,7 +25,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ],
         ),
         SettingsSection(
-          title: const Text('About', style: TextStyle(color: Colors.blue),),
+          title: const Text(
+            'About',
+            style: TextStyle(color: Colors.blue),
+          ),
           tiles: [
             // SettingsTile(
             //   title: const Text('Language'),
@@ -60,10 +61,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(setting),),
+      appBar: AppBar(
+        title: const Text(setting),
+      ),
       body: _buildSettingsList(),
     );
   }
-
 }
-

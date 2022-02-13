@@ -11,7 +11,6 @@ class NewTodoDialog extends StatefulWidget {
 }
 
 class _NewTodoDialog extends State<NewTodoDialog> {
-
   final controller = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
@@ -26,7 +25,10 @@ class _NewTodoDialog extends State<NewTodoDialog> {
           color: checkColor,
         ),
         suffixIcon: IconButton(
-          icon: const Icon(Icons.arrow_upward_outlined, color: Colors.blue,),
+          icon: const Icon(
+            Icons.arrow_upward_outlined,
+            color: Colors.blue,
+          ),
           onPressed: () {
             if (controller.value.text.trim().isNotEmpty) {
               final todo = Todo(title: controller.value.text);
@@ -80,6 +82,4 @@ class _NewTodoDialog extends State<NewTodoDialog> {
   Widget build(BuildContext context) {
     return _buildDialog(context);
   }
-
 }
-
